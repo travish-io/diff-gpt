@@ -52,3 +52,12 @@ python main.py <GitHub Pull Request URL>
 After a few moments, depending on the size of the PR, your PR summary will be printed to the console.
 
 ![diff-GPT example](https://cdn.discordapp.com/attachments/949084429601632316/1100442891769348166/image.png)
+
+
+## Monitor OpenAI API Usage
+
+This scipt works by chunking your PR .diff file and iteratively making openai API calls per chunk, which can add up for big files.
+
+[Keep an eye on your API usage!](https://platform.openai.com/account/usage)
+
+Chunks should scale dynamically, however, if you encounter a token limit error, you'll have to get in there and manually tweak the params.
