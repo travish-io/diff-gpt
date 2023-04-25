@@ -140,9 +140,6 @@ def main():
 
     print(summary)
 
-    # with open("summary.txt", "w") as f:
-    #     f.write(summary)
-
 
 if __name__ == "__main__":
     main()
