@@ -78,8 +78,7 @@ def generate_summary(diff_file_content, openai_api_key):
             model="text-davinci-003",
             prompt=f"Please provide a detailed summary of the changes made in the following GitHub pull request diff, describing the overall purpose and impact of the changes in a way that non-technical people will understand. Use Unicode bullet points to highlight the most important changes made:\n\n{chunk}",
             max_tokens=200,
-            temperature=0.3,
-            top_p=0.1,
+            temperature=0,
             n=1
         )
 
@@ -114,7 +113,7 @@ def generate_summary(diff_file_content, openai_api_key):
     spinner_thread.join()
 
     # Filter out empty summaries before joining
-    summary = "\n\n".join(filter(None, summaries))
+    summary = "\n\n" + "\n".join(filter(None, summaries)) + "\n\n"
 
     return summary
 
