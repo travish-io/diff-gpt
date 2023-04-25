@@ -22,18 +22,18 @@ diff-GPT is a simple command-line application that generates a human-readable su
 2. [Generate a github personal access token (PAT)](https://github.com/settings/tokens)
 3. Clone this repository:
 
-```bash
-git clone https://github.com/yourusername/gpt-pr-summarizer.git
-cd gpt-pr-summarizer
+```
+git clone https://github.com/travish-io/diff-gpt.git
+cd diff-gpt
 ```
 
-3. Install the required packages:
+4. Install the required packages:
 
 ```
 pip install -r requirements.txt
 ```
 
-4. Create a .env file with your OpenAI API key and GitHub Personal Access Token (PAT) by renaming the provided .env.template:
+5. Create a .env file with your OpenAI API key and GitHub Personal Access Token (PAT) by renaming the provided .env.template:
 
 ```
 cp .env.template .env
